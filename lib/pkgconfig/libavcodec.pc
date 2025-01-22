@@ -1,0 +1,14 @@
+prefix=/build/ffmpeg7_64
+exec_prefix=${prefix}
+libdir=/build/ffmpeg7_64/lib
+includedir=/build/ffmpeg7_64/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 61.31.101
+Requires: 
+Requires.private: libavutil >= 59.55.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -liconv -lm -latomic -lole32 -luser32
+Cflags: -I${includedir}

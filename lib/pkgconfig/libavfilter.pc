@@ -1,0 +1,14 @@
+prefix=/build/ffmpeg7_64
+exec_prefix=${prefix}
+libdir=/build/ffmpeg7_64/lib
+includedir=/build/ffmpeg7_64/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 10.6.101
+Requires: 
+Requires.private: libswscale >= 8.13.100, libavutil >= 59.55.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -lm -latomic
+Cflags: -I${includedir}
